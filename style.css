@@ -60,8 +60,11 @@ html, body {
 .nav-right a {
     text-decoration: none;
     color: #000000;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
+    font-style: medium;
+    line-height: 40px;
+    letter-spacing: 0%;
 }
 
 .header-center {
@@ -95,9 +98,11 @@ img.logo {
     pointer-events: none;
     z-index: 13;
     font-size: 18px;          
-    font-weight: 700;         
+    font-weight: bold;         
+    line-height: 100%;
+    letter-spacing: 0%;
     text-transform: uppercase;
-    color: #1a3a8f;   
+    color: #1F3170;   
 }
 
 .tag-left {
@@ -124,7 +129,7 @@ img.logo {
 
 .header-icons {
     display: flex;
-    gap: 16px;
+    gap: 26px;
     font-size: 18px;
 }
 
@@ -160,7 +165,6 @@ img.logo {
 .hero-content {
   position: absolute;
   font-weight: 300;
-  font-style: semi-bold;
   font-size: 18px;
   letter-spacing: 0%;
   bottom: 0;
@@ -176,9 +180,12 @@ img.logo {
 }
 
 .hero-content h2 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 600;
   margin-bottom: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
 }
 
 .hero-content p {
@@ -221,7 +228,6 @@ img.logo {
   width: 990px;
   top: 1278px;
   font-weight: 600;
-  font-style: semi-bold;
   font-size: 38px;
   left: 50%;
   line-height: 50px;
@@ -485,7 +491,6 @@ img.logo {
 
 .services-info h2 {
     font-weight: 600;
-    font-style: semi-bold;
     font-size: 48px;
     letter-spacing: 0%;
 }
@@ -587,7 +592,6 @@ img.logo {
 .overlap-content h2 {
     font-size: 38px;
     font-weight: 600;
-    font-style: semi-bold;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -633,7 +637,6 @@ img.logo {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0%;
-    font-style: semi-bold;
 }
 
 
