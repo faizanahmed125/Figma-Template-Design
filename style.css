@@ -509,8 +509,8 @@ img.logo {
   min-width: 50px;
 }
 
-.date-badge .month { display: block; font-size: 10px; font-weight: bold; }
-.date-badge .day { display: block; font-size: 18px; font-weight: 900; }
+.date-badge .month { display: block; font-size: 12px; }
+.date-badge .day { display: block; font-size: 24px; font-weight: 600; }
 
 .event-card h4 { font-size: 18px; margin-bottom: 5px; }
 .event-time { color: #ff5e62; font-weight: 500; }
@@ -596,7 +596,7 @@ img.logo {
 }
 
 .cta-overlap {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -637,7 +637,6 @@ img.logo {
 
 .overlap-box img {
   position: absolute;
-  width: 1194px;
   height: 500px;
 
 }
@@ -657,7 +656,7 @@ img.logo {
     margin-top: 40px;
 }
 
-.btn-primary {
+/* .btn-primary {
   display: inline-block;
   background-color: #ff5e62;
   color: white;
@@ -666,20 +665,38 @@ img.logo {
   text-decoration: none;
   font-size: 16px;
   margin-top: 20px;
+} */
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5e62;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+  gap: 10px;
 }
 
 .main-footer {
   background-color: #1F3170;
   color: white;
   padding: 30px 0 40px 0;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   height: 498px;
   border: 1px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 2fr 2fr 1fr 2fr;
+  column-gap: 120px;
   padding-left: 10px;
   padding-top: 120px;
 }
@@ -691,8 +708,6 @@ img.logo {
 
 .footer-col-2 {
     padding-top: 80px;
-    padding-left: 80px;
-    line-height: 25px;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0%;
@@ -710,11 +725,15 @@ img.logo {
   letter-spacing: 0%;
 }
 
+.footer-col-invisible {
+    visibility: hidden;
+}
+
 .copyright {
   text-align: left;
   font-size: 16px;
   opacity: 0.7;
-  padding-left: 210px;
+  padding-left: 170px;
   padding-bottom: 30px;
   width: 684px;
   height: 40px;
@@ -731,7 +750,7 @@ img.logo {
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   padding-top: 10px;
   opacity: 50%;
 }
