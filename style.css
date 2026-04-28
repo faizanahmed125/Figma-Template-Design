@@ -39,7 +39,7 @@ html, body {
     position: relative;      
     overflow: visible;       
     z-index: 10;
-    height: 110px;        
+    height: 113px;        
 }
 
 .logo-wrapper {
@@ -66,7 +66,6 @@ html, body {
     color: #000000;
     font-size: 18px;
     font-weight: 500;
-    font-style: medium;
     line-height: 40px;
     letter-spacing: 0%;
 }
@@ -83,12 +82,14 @@ html, body {
 }
 
 img.logo {
-    width: 170px;             
-    height: 170px;            
-    border-radius: 50%;       
+    width: 154px;             
+    height: 128px;            
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;       
     display: block;
-    object-fit: contain;      
+    object-fit: cover;      
     background-color: #ffffff;
+    margin-top: 20px;
 }
 
 .tagline {
@@ -177,7 +178,7 @@ img.logo {
   padding: 60px 40px; 
   text-align: center;
   color: #ffffff;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,1.0) 0%, rgba(0,0,0,0) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,17 +228,19 @@ img.logo {
 .main-banner img {
   width: 100%;
   height: auto;
+  background: linear-gradient(to top, rgba(0,0,0,1.0) 0%, rgba(0,0,0,0) 100%);
+
 }
 
 .main-banner-content{
   position: absolute;
   width: 990px;
   height: 50px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 38px;
   left: 50%;
-  line-height: 50px;
-  letter-spacing: 0%;
+  line-height: 15px;
+  letter-spacing: -1.7%;
   transform: translate(-50%, -200%);
   color: white;
   text-align: center;
@@ -247,7 +250,7 @@ img.logo {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'poppins', sans-serif;
+   font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -269,6 +272,7 @@ img.logo {
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
+  margin-top: 10px;
 }
 
 .bio-content h1 {
@@ -359,16 +363,25 @@ img.logo {
 }
 
 .shop-header h2 {
-  font-size: 32px;
+  font-size: 48px;
   margin-bottom: 15px;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0%;
+  line-height: 100%;
 }
 
 .shop-header p {
-  color: #555;
-  max-width: 600px;
+  color: #000000;
+  max-width: 907px;
   margin: 0 auto 50px auto;
-  line-height: 1.5;
+  font-size: 20px;
+  letter-spacing: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  padding-top: 10px;
 }
 
 .product-grid {
@@ -410,30 +423,40 @@ img.logo {
   padding: 20px;
   text-align: left;
   color: white;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  background: linear-gradient(to top, rgba(0, 0, 0, 5.0) 20%, rgba(0, 0, 0, 0.02) 100%);
 }
 
 .product-info h4 {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .product-info p {
-  font-size: 14px;
+  font-size: 16px;
   color: #ff5e62; 
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.shop-footer {
+  display: flex;
+  justify-content: center;
 }
 
 .btn-shop {
   background-color: #ff5e62;
   color: white;
   align-items: center;
-  padding: 12px 20px;
-  font-weight:lighter;
+  padding: 8px 24px;
+  font-weight: 300;
   border-radius: 50px;
   text-decoration: none;
   font-size: 16px;
+  display: flex;
+  gap: 10px;
 }
+
+
 
 .events-header {
   display: flex;
@@ -523,11 +546,11 @@ img.logo {
   justify-content: center;
   background-color: #ff5e62;
   color: white;
-  padding: 5px 26px;
+  /* padding: 5px 26px; */
   border-radius: 50px;
   text-decoration: none;
   margin-top: 15px;
-  width: 157px;
+  width: 135px;
   height: 45px;
   font-size: 16px;
   gap: 8px;
@@ -563,7 +586,7 @@ img.logo {
 .arrow-down {
   font-size: 16px;
   color: #ff5e62;
-  border: 0.5px solid #ddd;
+  background: white;
   width: 30px;
   height: 30px;
   display: flex;
@@ -591,25 +614,47 @@ img.logo {
   text-align: center;
 }
 
+.overlap-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* This height determines how far up the darkness goes */
+    height: 100%; 
+    
+    /* This matches your Figma logic: Black at bottom, fading to nothing at top */
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.9) 0%,   /* Solid dark at the very bottom */
+        rgba(0, 0, 0, 0.5) 40%,  /* Starting to fade near the text */
+        rgba(0, 0, 0, 0) 100%    /* Invisible at the top */
+    );
+    
+    z-index: 1; /* Sits above the image (0) but below content (2) */
+    pointer-events: none; /* Allows users to still click through the box */
+}
+
 .overlap-box img {
   position: absolute;
   width: 1194px;
   height: 500px;
-  object-fit: cover;
-  filter: brightness(0.6);  
+
 }
 
 .overlap-content {
   position: relative;
   color: white;
   padding-top: 90px;
+  z-index: 2;
 }
 
 .overlap-content h2 {
     font-size: 38px;
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -3%;
+    margin-top: 40px;
 }
 
 .btn-primary {
@@ -675,7 +720,7 @@ img.logo {
   height: 40px;
   opacity: 60%;
   font-weight: 400;
-  line-height: 40px;
+  /* line-height: 40px; */
   letter-spacing: 0%;
 
 }
